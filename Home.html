@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bf4dece23b.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            transition: 0.4s all;
+            box-sizing: border-box;
+        }
+
+        .left-bar-fixed-page-links {
+            top: 50%;
+            left: 0;
+            transform: translateY(-30%);
+        }
+
+        .rotate-clockwise {
+            transform: rotate(-90deg);
+            height: 115px;
+            width: 30px;
+            font-size: 13px;
+        }
+
+        .fs-9 {
+            font-size: 8px;
+        }
+
+        .fs-8 {
+            font-size: 11px;
+        }
+
+        .fs-7 {
+            font-size: 14px;
+        }
+
+        .dots:hover .nav-column-name span {
+            visibility: visible !important;
+        }
+
+        .hover-bg-black-c-white:hover {
+            background: black !important;
+            color: white !important;
+        }
+        .content-nav-item:hover .nav-column-name span {
+            background: red !important;
+        }
+        .title-whats-hot {
+            position: relative;
+            padding-top: 10px;
+        }
+
+        .title-whats-hot::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #3D73D1, #E6248A);
+        }
+
+        .content-box-whats-hot {
+            margin-top: -55px !important;
+        }
+
+        .rounded-end-5 {
+            border-radius: 0 10px 0 0;
+        }
+
+        .text-pinkish-color {
+            color: #e6248a;
+        }
+
+        .border-white-1 {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .counter-increasement {
+            counter-reset: css-counter 0;
+        }
+
+        .counter-increasement li {
+            counter-increment: css-counter 1;
+        }
+
+        .counter-increasement li::before {
+            content: counter(css-counter);
+            color: white;
+            position: absolute;
+            left: 10px;
+            font-size: 42px;
+            line-height: 1;
+        }
+
+        .hover-underline-blue:hover {
+            text-decoration-line: underline !important;
+            text-decoration-color: #3D73D1 !important;
+        }
+
+        .hover-underline-pink:hover {
+            text-decoration-line: underline !important;
+            text-decoration-color: #e6248a !important;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .rotate-clockwise {
+                width: 115px;
+                text-align: center;
+            }
+
+            .height-55px {
+                height: 55px !important;
+                text-align: center;
+                width: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .left-page-links {
+                display: none !important;
+            }
+            .content-box-whats-hot {
+            margin-top: -20px !important;
+        }
+        }
+
+        @media only screen and (min-width: 1400px) {
+            .container {
+                max-width: 1140px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-layout-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="left-page-links position-relative">
+                        <section class="left-bar-fixed-page-links position-fixed d-flex flex-column h-100 px-2">
+                            <div class="comment-section-mark ms-1">
+                                <a href="#" class="text-decoration-none text-danger" aria-label="Comment">
+                                    <i class="fa-solid fa-comment fs-5 mb-3"></i>
+                                </a>
+                            </div>
+                            <div class="comment-section-mark ms-1">
+                                <a href="#" class="text-decoration-none text-danger" aria-label="Bookmark">
+                                    <i class="fa-regular fa-bookmark fs-5"></i>
+                                </a>
+                            </div>
+                            <span class="rotate-clockwise fw-medium">On this page</span>
+                            <div class="dots content-nav-items d-flex flex-column ms-2">
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">Small but plenty of features</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">Recording your rounds&nbsp;</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">PowerShot GOLF key specs&nbsp;</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">Price and availability</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">Comments</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <span class="rotate-clockwise fw-medium height-55px">Share</span>
+                            <ul class="social-links-wrapper list-unstyled">
+                                <li><a href="#" class="px-1 py-1 hover-bg-black-c-white text-dark rounded-circle"><i class="mt-2 fa-brands fa-facebook"></i></a></li>
+                                <li><a href="#" class="px-1 py-1 hover-bg-black-c-white text-dark rounded-circle"><i class="mt-2 fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#" class="px-1 py-1 hover-bg-black-c-white text-dark rounded-circle"><i class="mt-2 fa-brands fa-threads"></i></a></li>
+                                <li><a href="#" class="px-1 py-1 hover-bg-black-c-white text-dark rounded-circle"><i class="mt-2 fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-lg-10 px-0">
+                    <div class="background-container-trending bg-dark pb-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-12">
+                                    <div class="title-whats-hot py-4 mt-5 text-white">
+                                        <h1>What's hot</h1>
+                                    </div>
+                                    <div class="img-container-whats-hot bg-white">
+                                        <a href="#" class="text-decoration-none text-dark hover-underline-pink">
+                                            <img src="./assests/fE6dtEyqn49Q4g3VYE3xt9-1920-80.jpg.webp" alt="Sonos announces its first headphones" class="w-100 position-relative z-0">
+                                            <div class="content-box-whats-hot px-5 py-4 position-relative z-3 bg-white rounded-end-5">
+                                                <h2>Sonos announces its first headphones, with noise cancellation and Dolby Atmos – but not the feature we most expected</h2>
+                                                <p class="pt-2 fs-5">Sonos Ace are packed with features, but don't work with Sonos' Wi-Fi music system, surprisingly.</p>
+                                            </div>
+                                        </a>
+                                        <div class="row px-5 g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <a href="#" class="text-decoration-none text-dark hover-underline-blue">
+                                                    <img src="./assests/sYT4cFQGdSNfEhs37vP7L5-1920-80.jpg.webp" alt="Windows Recall sounds like a privacy nightmare" class="img-fluid mb-3">
+                                                    <h2 class="fs-5 mb-5">Windows Recall sounds like a privacy nightmare – here's why I'm worried</h2>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <a href="#" class="text-decoration-none text-dark hover-underline-blue">
+                                                    <img src="./assests/sYT4cFQGdSNfEhs37vP7L5-1920-80.jpg.webp" alt="Windows Recall sounds like a privacy nightmare" class="img-fluid mb-3">
+                                                    <h2 class="fs-5 mb-5">Windows Recall sounds like a privacy nightmare – here's why I'm worried</h2>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <a href="#" class="text-decoration-none text-dark hover-underline-blue">
+                                                    <img src="./assests/sYT4cFQGdSNfEhs37vP7L5-1920-80.jpg.webp" alt="Windows Recall sounds like a privacy nightmare" class="img-fluid mb-3">
+                                                    <h2 class="fs-5 mb-5">Windows Recall sounds like a privacy nightmare – here's why I'm worried</h2>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <a href="#" class="text-decoration-none text-dark hover-underline-blue">
+                                                    <img src="./assests/sYT4cFQGdSNfEhs37vP7L5-1920-80.jpg.webp" alt="Windows Recall sounds like a privacy nightmare" class="img-fluid mb-3">
+                                                    <h2 class="fs-5 mb-5">Windows Recall sounds like a privacy nightmare – here's why I'm worried</h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="title-whats-hot pt-4 pb-3 mt-5 text-white">
+                                        <h1>Latest news</h1>
+                                    </div>
+                                    <a href="#" class="text-decoration-none text-white fs-4 fw-semibold d-flex align-items-center gap-2">
+                                        ALL NEWS <i class="fa-solid fa-angle-right fs-7 text-pinkish-color"></i>
+                                    </a>
+                                    <div class="all-news-news-feed">
+                                        <ul class="list-unstyled text-white counter-increasement">
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT VACUUMS</span>
+                                                    </div>
+                                                    <img src="./assests/cum2P5YvGTcdL42czT2HXY-650-80.jpg.webp" alt="Ecovacs' new robovac" class="w-25 pe-0 object-fit-cover me-4">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT VACUUMS</span>
+                                                    </div>
+                                                    <img src="./assests/cum2P5YvGTcdL42czT2HXY-650-80.jpg.webp" alt="Ecovacs' new robovac" class="w-25 pe-0 object-fit-cover me-4">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT VACUUMS</span>
+                                                    </div>
+                                                    <img src="./assests/cum2P5YvGTcdL42czT2HXY-650-80.jpg.webp" alt="Ecovacs' new robovac" class="w-25 pe-0 object-fit-cover me-4">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT VACUUMS</span>
+                                                    </div>
+                                                    <img src="./assests/cum2P5YvGTcdL42czT2HXY-650-80.jpg.webp" alt="Ecovacs' new robovac" class="w-25 pe-0 object-fit-cover me-4">
+                                                </a>
+                                            </li>
+
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT VACUUMS</span>
+                                                    </div>
+                                                    <img src="./assests/cum2P5YvGTcdL42czT2HXY-650-80.jpg.webp" alt="Ecovacs' new robovac" class="w-25 pe-0 object-fit-cover me-4">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT VACUUMS</span>
+                                                    </div>
+                                                    <img src="./assests/cum2P5YvGTcdL42czT2HXY-650-80.jpg.webp" alt="Ecovacs' new robovac" class="w-25 pe-0 object-fit-cover me-4">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT VACUUMS</span>
+                                                    </div>
+                                                    <img src="./assests/cum2P5YvGTcdL42czT2HXY-650-80.jpg.webp" alt="Ecovacs' new robovac" class="w-25 pe-0 object-fit-cover me-4">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT VACUUMS</span>
+                                                    </div>
+                                                    <img src="./assests/cum2P5YvGTcdL42czT2HXY-650-80.jpg.webp" alt="Ecovacs' new robovac" class="w-25 pe-0 object-fit-cover me-4">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT VACUUMS</span>
+                                                    </div>
+                                                    <img src="./assests/cum2P5YvGTcdL42czT2HXY-650-80.jpg.webp" alt="Ecovacs' new robovac" class="w-25 pe-0 object-fit-cover me-4">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-WpOohVFF5TAx9rIdfJT6/4fT6Y6W0S4g1sGkq3q3cmP4zrZLq/ImkRywTlgmMRH8" crossorigin="anonymous"></script>
+</body>
+
+</html>
