@@ -8,169 +8,356 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .title-whats-hot {
+            position: relative;
+            padding-top: 10px;
+        }
+
+        .title-whats-hot::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #3D73D1, #E6248A);
+        }
+
+        .content-box-whats-hot {
+            margin-top: -55px !important;
+        }
+
+        .rounded-end-5 {
+            border-radius: 0 10px 0 0;
+        }
+
+        .text-pinkish-color {
+            color: #e6248a;
+        }
+
+        .border-white-1 {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .counter-increasement {
+            counter-reset: css-counter 0;
+        }
+
+        .counter-increasement li {
+            counter-increment: css-counter 1;
+        }
+
+        .counter-increasement li::before {
+            content: counter(css-counter);
+            color: white;
+            position: absolute;
+            left: 10px;
+            font-size: 42px;
+            line-height: 1;
+        }
+
+        .hover-underline-blue:hover {
+            text-decoration-line: underline !important;
+            text-decoration-color: #3D73D1 !important;
+        }
+
+        .hover-underline-pink:hover {
+            text-decoration-line: underline !important;
+            text-decoration-color: #e6248a !important;
+        }
+
+        .photo {
+            height: 275px;
+            width: 210px;
+            
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="mb-3">
-                <h1 class="fw-bold mb-0">How to Use Google Lens in a Chrome Browser</h1>
-                <p class="text-secondary">Searching for visuals on the web is easier than ever.</p>
-            </div>
-            <div class="col-lg-8">
-                <div class=" d-flex flex-column justify-content-between flex-md-row align-items-start mb-2 ">
-                    <div class=" mb-3 mb-lg-0">
-                        <span class="text-secondary">By</span> David Nield Published September 13, 2024 <span
-                            class="text-secondary">| Comments</span>
+    <div class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="mb-3 py-3">
+                    <h1 class="fw-bold mb-0 text-white">How to Use Google Lens in a Chrome Browser</h1>
+                    <p class="text-secondary">Searching for visuals on the web is easier than ever.</p>
+                </div>
+    
+                <div class="col-lg-8">
+                    <div class=" d-flex flex-column justify-content-between flex-md-row align-items-start mb-2 text-white">
+                        <div class=" mb-3 mb-lg-0">
+                            <span class="text-secondary">By</span> David Nield Published September 13, 2024 <span
+                                class="text-secondary">| Comments</span>
+                        </div>
+                        <div class=" d-flex  justify-content-end gap-2 text-white flex-wrap w-100 w-md-auto">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-facebook rounded-circle px-2 py-1" style="background-color: #3B5998;"></i>
+                            </div>
+    
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-reddit rounded-circle px-2 py-1" style="background-color: #FF5700;"></i>
+                            </div>
+    
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-envelope bg-secondary rounded-circle px-2 py-1"></i>
+                            </div>
+    
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-link rounded-circle px-2 py-1" style="background-color: #0075B2;"></i>
+                            </div>
+    
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-twitter-x rounded-circle px-2 py-1" style="background-color: #000000;"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class=" d-flex  justify-content-end gap-2 text-white flex-wrap w-100 w-md-auto">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <i class="bi bi-facebook rounded-circle px-2 py-1" style="background-color: #3B5998;"></i>
-                        </div>
-
-                        <div class="d-flex justify-content-center align-items-center">
-                            <i class="bi bi-reddit rounded-circle px-2 py-1" style="background-color: #FF5700;"></i>
-                        </div>
-
-                        <div class="d-flex justify-content-center align-items-center">
-                            <i class="bi bi-envelope bg-secondary rounded-circle px-2 py-1"></i>
-                        </div>
-
-                        <div class="d-flex justify-content-center align-items-center">
-                            <i class="bi bi-link rounded-circle px-2 py-1" style="background-color: #0075B2;"></i>
-                        </div>
-
-                        <div class="d-flex justify-content-center align-items-center">
-                            <i class="bi bi-twitter-x rounded-circle px-2 py-1" style="background-color: #000000;"></i>
-                        </div>
+                    <div class="mb-5 text-white">
+                        <img src="https://cdn.pixabay.com/photo/2015/02/02/15/28/bar-621033_1280.jpg" alt=""
+                            class="img-fluid w-100 mb-5">
+                        <p style="text-align: justify;">
+                            <strong class="fs-2">On Desktop (PC/Mac):</strong><br><br>
+                            <strong>1. Ensure Chrome is Updated:</strong>
+                            Make sure you are using the latest version of Chrome. Google Lens is integrated directly into
+                            the Chrome browser, so updating Chrome to the most recent version is important. <br><br>
+    
+                            <strong>2. Open Chrome and Visit a Website:</strong><br>
+                            Go to a website with an image you want to analyze or right-click on any image on the webpage.
+                            <br><br>
+    
+                            <strong>3. Use Google Lens:</strong><br>
+                            Right-click on the image you want to use with Google Lens.
+                            From the context menu that appears, select "Search image with Google Lens."
+                            A new panel will open on the right side of the browser, displaying results and information
+                            related to the image (such as similar images, text, or objects detected). <br><br>
+    
+                            <strong>4. Explore Results:</strong><br>
+                            Google Lens will identify objects, text, landmarks, and other elements in the image, providing
+                            links and additional information. <br><br>
+    
+                            <strong class="fs-2">On Mobile (Android/iOS):</strong><br>
+                            If you want to use Google Lens on a mobile device, you can do so via the Google Lens app or
+                            directly through the Google Chrome app (Android only): <br><br>
+    
+                            <strong>1. Open the Chrome App:</strong><br>
+                            Open the Chrome app on your phone and visit the webpage with the image. <br><br>
+    
+                            <strong>2. Use Google Lens:</strong><br>
+                            Tap and hold on the image you want to search with Google Lens.
+                            From the context menu, tap "Search with Google Lens."
+                            You’ll see similar results, information, and visual recognition related to the image.
+                            This integration works both on desktop and mobile versions of Chrome, but the desktop experience
+                            is more advanced for now, with the option to analyze images directly from web pages.<br>
+                        </p>
+                    </div>
+    
+                    <div class="text-white">
+                        <h1 class="fw-bold text-primary">The best uses for Google Lens in Chrome</h1>
+                        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/27/electronics-1868708_960_720.jpg" alt=""
+                            class="img-fluid w-100 py-3"> <br> <br>
+    
+                        <p>
+                            <strong class="fs-5">1. Identify Objects and Landmarks</strong><br><br>
+                            <strong>Use Case:</strong> If you encounter an image of a famous landmark or object, Google Lens
+                            can identify it
+                            for you. <br>
+                            Example: See an image of a historical monument or a rare item on a webpage? Google Lens will
+                            provide information about it, including its name, history, or related websites. <br><br>
+    
+                            <strong class="fs-5">2. Text Translation and Copying</strong><br> <br>
+                            <strong>Use Case:</strong>You can use Google Lens to extract and translate text from an image.
+                            This is
+                            particularly helpful when browsing non-English websites or when you come across text in images.
+                            <br>
+                            Example: Right-click on an image with foreign text, and Lens will allow you to translate the
+                            text into your preferred language. <br><br>
+    
+                            <strong class="fs-5">3. Product Search and Shopping.</strong><br><br>
+                            <strong>Use Case:</strong>Google Lens can be used to search for products within images, allowing
+                            you to find the
+                            exact product or similar ones available online. <br>
+                            Example: If you see a stylish dress or tech gadget on a webpage, right-click and use Google Lens
+                            to find where to buy it or get more details about the product.<br><br>
+    
+                            <strong class="fs-5">4. Identify Plants and Animals</strong><br><br>
+                            <strong>Use Case:</strong> If you find an image of a plant or an animal, Google Lens can provide
+                            insights into
+                            its species, care instructions, or other relevant details. <br>
+                            Example: Spot a plant you like on a gardening website? Use Google Lens to identify its name and
+                            care tips instantly.<br> <br>
+    
+    
+                            <strong class="fs-5">5. Learn About Artwork</strong> <br> <br>
+                            <strong>Use Case:</strong> Google Lens can identify artwork and provide information about the
+                            artist, era, and
+                            context. <br>
+                            Example: See a famous painting on a museum website? Right-click and Google Lens will tell you
+                            about the painting and its artist.<br><br>
+    
+                            <strong class="fs-5">6. Scan Barcodes and QR Codes</strong> <br> <br>
+                            <strong>Use Case:</strong> You can use Google Lens to scan barcodes or QR codes directly from
+                            images on websites. <br>
+                            Example: Scan a QR code in an image that links to a discount or special offer while
+                            shopping.<br> <br>
+    
+                            <strong class="fs-5">7. Visual Search for Similar Images</strong> <br> <br>
+                            <strong>Use Case:</strong> Google Lens allows you to find similar images or objects across the
+                            web, helping you
+                            explore more content related to your. <br>
+                            Example: Discover more images or variations of a product or an aesthetic by using Google Lens to
+                            search visually.<br><br>
+    
+                            <strong class="fs-5">8. Find Recipes and Ingredients</strong> <br> <br>
+                            <strong>Use Case:</strong> Google Lens can recognize food items in images, allowing you to
+                            search for recipes and
+                            related cooking instructions. <br>
+                            Example: Spot a dish you want to try on a cooking blog? Right-click the image, and Google Lens
+                            can help you find the recipe and cooking methods.<br><br>
+    
+                            <strong class="fs-5">9. Get Information on Books, Movies, or Music</strong> <br> <br>
+                            <strong>Use Case:</strong> Lens can recognize book covers, movie posters, and album artwork,
+                            providing more
+                            details about the content. <br>
+                            Example: Curious about a book you've seen online? Right-click the cover image, and Google Lens
+                            can tell you the title, author, and related reviews.<br><br>
+    
+    
+                            <strong class="fs-5">10. Extract Text for Note-Taking</strong> <br> <br>
+                            <strong>Use Case:</strong> Google Lens can extract text from images, which is perfect for
+                            digitizing notes or
+                            quotes from websites or PDFs. <br>
+                            Example: Need to copy a quote from an image or article but don’t want to type it manually? Use
+                            Google Lens to extract the text for easy copying.<br><br>
+                        </p>
+                    </div>
+    
+                </div>
+    
+                <div class="col-lg-4 col-md-12">
+                    <div class="title-whats-hot pb-3 mt-5 text-white">
+                        <h1>Latest news</h1>
+                    </div>
+                    <a href="#" class="text-decoration-none text-white fs-4 fw-semibold d-flex align-items-center gap-2">
+                        ALL NEWS <i class="fa-solid fa-angle-right fs-7 text-pinkish-color"></i>
+                    </a>
+                    <div class="all-news-news-feed">
+                        <ul class="list-unstyled text-white counter-increasement">
+                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                    <div class="pe-4">
+                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                            to give it the boot – literally</h4>
+                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                            VACUUMS</span>
+                                    </div>
+                                    <img src="https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072198.jpg?t=st=1735626738~exp=1735630338~hmac=7f89edd9cb23ad20386a408dc94079d947f0e6107c39f0128373e76ec5516f56&w=996"
+                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                </a>
+                            </li>
+                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                    <div class="pe-4">
+                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                            to give it the boot – literally</h4>
+                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                            VACUUMS</span>
+                                    </div>
+                                    <img src="https://cdn.pixabay.com/photo/2021/02/13/03/30/airpods-6010255_960_720.jpg"
+                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                </a>
+                            </li>
+                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                    <div class="pe-4">
+                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                            to give it the boot – literally</h4>
+                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                            VACUUMS</span>
+                                    </div>
+                                    <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074301.jpg?t=st=1735626862~exp=1735630462~hmac=2215f3e1911039d12f807ca3cee28fc33d019f3409712b9d33fd62ff5e171dfe&w=996"
+                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                </a>
+                            </li>
+                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                    <div class="pe-4">
+                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                            to give it the boot – literally</h4>
+                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                            VACUUMS</span>
+                                    </div>
+                                    <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074299.jpg?t=st=1735626889~exp=1735630489~hmac=1fd7ffe8fcf009815fd5d220d94e562201a0de375ecd2c81caba735638f7e84b&w=1060"
+                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                </a>
+                            </li>
+    
+                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                    <div class="pe-4">
+                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                            to give it the boot – literally</h4>
+                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                            VACUUMS</span>
+                                    </div>
+                                    <img src="https://cdn.pixabay.com/photo/2023/05/07/10/20/airpods-7976095_960_720.jpg"
+                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                </a>
+                            </li>
+                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                    <div class="pe-4">
+                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                            to give it the boot – literally</h4>
+                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                            VACUUMS</span>
+                                    </div>
+                                    <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074263.jpg?t=st=1735626533~exp=1735630133~hmac=368d41e43a6ac5b20e7666b6abd96fba852e85acc3911855632f6fb7e927ed16&w=900"
+                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                </a>
+                            </li>
+                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                    <div class="pe-4">
+                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                            to give it the boot – literally</h4>
+                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                            VACUUMS</span>
+                                    </div>
+                                    <img src="https://cdn.pixabay.com/photo/2022/05/28/05/29/airpods-7226558_960_720.jpg"
+                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                </a>
+                            </li>
+                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                    <div class="pe-4">
+                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                            to give it the boot – literally</h4>
+                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                            VACUUMS</span>
+                                    </div>
+                                    <img src="https://cdn.pixabay.com/photo/2020/05/14/09/54/earphones-5193970_960_720.jpg"
+                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                </a>
+                            </li>
+                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                <a href="#" class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                    <div class="pe-4">
+                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                            to give it the boot – literally</h4>
+                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                            VACUUMS</span>
+                                    </div>
+                                    <img src="https://cdn.pixabay.com/photo/2020/09/24/14/51/earphones-5598952_960_720.jpg"
+                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="mb-5">
-                    <img src="https://cdn.pixabay.com/photo/2015/02/02/15/28/bar-621033_1280.jpg" alt=""
-                        class="img-fluid w-100 mb-5">
-                    <p style="text-align: justify;">
-                        <strong class="fs-2">On Desktop (PC/Mac):</strong><br><br>
-                        <strong>1. Ensure Chrome is Updated:</strong>
-                        Make sure you are using the latest version of Chrome. Google Lens is integrated directly into
-                        the Chrome browser, so updating Chrome to the most recent version is important. <br><br>
-
-                        <strong>2. Open Chrome and Visit a Website:</strong><br>
-                        Go to a website with an image you want to analyze or right-click on any image on the webpage.
-                        <br><br>
-
-                        <strong>3. Use Google Lens:</strong><br>
-                        Right-click on the image you want to use with Google Lens.
-                        From the context menu that appears, select "Search image with Google Lens."
-                        A new panel will open on the right side of the browser, displaying results and information
-                        related to the image (such as similar images, text, or objects detected). <br><br>
-
-                        <strong>4. Explore Results:</strong><br>
-                        Google Lens will identify objects, text, landmarks, and other elements in the image, providing
-                        links and additional information. <br><br>
-
-                        <strong class="fs-2">On Mobile (Android/iOS):</strong><br>
-                        If you want to use Google Lens on a mobile device, you can do so via the Google Lens app or
-                        directly through the Google Chrome app (Android only): <br><br>
-
-                        <strong>1. Open the Chrome App:</strong><br>
-                        Open the Chrome app on your phone and visit the webpage with the image. <br><br>
-
-                        <strong>2. Use Google Lens:</strong><br>
-                        Tap and hold on the image you want to search with Google Lens.
-                        From the context menu, tap "Search with Google Lens."
-                        You’ll see similar results, information, and visual recognition related to the image.
-                        This integration works both on desktop and mobile versions of Chrome, but the desktop experience
-                        is more advanced for now, with the option to analyze images directly from web pages.<br>
-                    </p>
-                </div>
-
-                <div>
-                    <h1 class="fw-bold text-primary">The best uses for Google Lens in Chrome</h1>
-                    <img src="https://cdn.pixabay.com/photo/2016/11/29/09/27/electronics-1868708_960_720.jpg" alt=""
-                        class="img-fluid w-100 py-3"> <br> <br>
-
-                    <p>
-                        <strong class="fs-5">1. Identify Objects and Landmarks</strong><br><br>
-                        <strong>Use Case:</strong> If you encounter an image of a famous landmark or object, Google Lens
-                        can identify it
-                        for you. <br>
-                        Example: See an image of a historical monument or a rare item on a webpage? Google Lens will
-                        provide information about it, including its name, history, or related websites. <br><br>
-
-                        <strong class="fs-5">2. Text Translation and Copying</strong><br> <br>
-                        <strong>Use Case:</strong>You can use Google Lens to extract and translate text from an image.
-                        This is
-                        particularly helpful when browsing non-English websites or when you come across text in images.
-                        <br>
-                        Example: Right-click on an image with foreign text, and Lens will allow you to translate the
-                        text into your preferred language. <br><br>
-
-                        <strong class="fs-5">3. Product Search and Shopping.</strong><br><br>
-                        <strong>Use Case:</strong>Google Lens can be used to search for products within images, allowing
-                        you to find the
-                        exact product or similar ones available online. <br>
-                        Example: If you see a stylish dress or tech gadget on a webpage, right-click and use Google Lens
-                        to find where to buy it or get more details about the product.<br><br>
-
-                        <strong class="fs-5">4. Identify Plants and Animals</strong><br><br>
-                        <strong>Use Case:</strong> If you find an image of a plant or an animal, Google Lens can provide
-                        insights into
-                        its species, care instructions, or other relevant details. <br>
-                        Example: Spot a plant you like on a gardening website? Use Google Lens to identify its name and
-                        care tips instantly.<br> <br>
-
-
-                        <strong class="fs-5">5. Learn About Artwork</strong> <br> <br>
-                        <strong>Use Case:</strong> Google Lens can identify artwork and provide information about the
-                        artist, era, and
-                        context. <br>
-                        Example: See a famous painting on a museum website? Right-click and Google Lens will tell you
-                        about the painting and its artist.<br><br>
-
-                        <strong class="fs-5">6. Scan Barcodes and QR Codes</strong> <br> <br>
-                        <strong>Use Case:</strong> You can use Google Lens to scan barcodes or QR codes directly from
-                        images on websites. <br>
-                        Example: Scan a QR code in an image that links to a discount or special offer while
-                        shopping.<br> <br>
-
-                        <strong class="fs-5">7. Visual Search for Similar Images</strong> <br> <br>
-                        <strong>Use Case:</strong> Google Lens allows you to find similar images or objects across the
-                        web, helping you
-                        explore more content related to your. <br>
-                        Example: Discover more images or variations of a product or an aesthetic by using Google Lens to
-                        search visually.<br><br>
-
-                        <strong class="fs-5">8. Find Recipes and Ingredients</strong> <br> <br>
-                        <strong>Use Case:</strong> Google Lens can recognize food items in images, allowing you to
-                        search for recipes and
-                        related cooking instructions. <br>
-                        Example: Spot a dish you want to try on a cooking blog? Right-click the image, and Google Lens
-                        can help you find the recipe and cooking methods.<br><br>
-
-                        <strong class="fs-5">9. Get Information on Books, Movies, or Music</strong> <br> <br>
-                        <strong>Use Case:</strong> Lens can recognize book covers, movie posters, and album artwork,
-                        providing more
-                        details about the content. <br>
-                        Example: Curious about a book you've seen online? Right-click the cover image, and Google Lens
-                        can tell you the title, author, and related reviews.<br><br>
-
-
-                        <strong class="fs-5">10. Extract Text for Note-Taking</strong> <br> <br>
-                        <strong>Use Case:</strong> Google Lens can extract text from images, which is perfect for
-                        digitizing notes or
-                        quotes from websites or PDFs. <br>
-                        Example: Need to copy a quote from an image or article but don’t want to type it manually? Use
-                        Google Lens to extract the text for easy copying.<br><br>
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="col-lg-4">
-
             </div>
         </div>
     </div>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-WpOohVFF5TAx9rIdfJT6/4fT6Y6W0S4g1sGkq3q3cmP4zrZLq/ImkRywTlgmMRH8"
         crossorigin="anonymous"></script>
