@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/bf4dece23b.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            transition: 0.4s all;
+            box-sizing: border-box;
+        }
+
+        .left-bar-fixed-page-links {
+            top: 50%;
+            left: 0;
+            transform: translateY(-30%);
+        }
+
+        .rotate-clockwise {
+            transform: rotate(-90deg);
+            height: 115px;
+            width: 30px;
+            font-size: 13px;
+        }
+
+        .fs-9 {
+            font-size: 8px;
+        }
+
+        .fs-8 {
+            font-size: 11px;
+        }
+
+        .fs-7 {
+            font-size: 14px;
+        }
+
+        .dots:hover .nav-column-name span {
+            visibility: visible !important;
+        }
+
+        .hover-bg-black-c-white:hover {
+            background: black !important;
+            color: white !important;
+        }
+
+        .content-nav-item:hover .nav-column-name span {
+            background: red !important;
+        }
+
+        .title-whats-hot {
+            position: relative;
+            padding-top: 10px;
+        }
+
+        .title-whats-hot::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #3D73D1, #E6248A);
+        }
+
+        .content-box-whats-hot {
+            margin-top: -55px !important;
+        }
+
+        .rounded-end-5 {
+            border-radius: 0 10px 0 0;
+        }
+
+        .text-pinkish-color {
+            color: #e6248a;
+        }
+
+        .border-white-1 {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .counter-increasement {
+            counter-reset: css-counter 0;
+        }
+
+        .counter-increasement li {
+            counter-increment: css-counter 1;
+        }
+
+        .counter-increasement li::before {
+            content: counter(css-counter);
+            color: white;
+            position: absolute;
+            left: 10px;
+            font-size: 42px;
+            line-height: 1;
+        }
+
+        .hover-underline-blue:hover {
+            text-decoration-line: underline !important;
+            text-decoration-color: #3D73D1 !important;
+        }
+
+        .hover-underline-pink:hover {
+            text-decoration-line: underline !important;
+            text-decoration-color: #e6248a !important;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+
+        }
+
+
+        .photo {
+            height: 200px;
+        }
+
+
+        @media only screen and (min-width: 1200px) {
+            .rotate-clockwise {
+                width: 115px;
+                text-align: center;
+            }
+
+            .height-55px {
+                height: 55px !important;
+                text-align: center;
+                width: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .left-page-links {
+                display: none !important;
+            }
+
+            .content-box-whats-hot {
+                margin-top: -20px !important;
+            }
+        }
+
+        @media only screen and (min-width: 1400px) {
+            .container {
+                max-width: 1140px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="d-flex justify-content-between">
+                        <h1 class="fs-4 mb-0 text-uppercase py-3 text-white">Gadget Rumor</h1>
+                        <ul class="list-unstyled d-flex gap-4 mb-0 py-3 fs-5">
+                            <li><a href="" class="text-decoration-none  text-white">Home</a></li>
+                            <li><a href="" class="text-decoration-none  text-white">News</a></li>
+                            <li><a href="" class="text-decoration-none  text-white">Reviews</a></li>
+                            <li><a href="" class="text-decoration-none  text-white">About Us</a></li>
+                            <li><a href="" class="text-decoration-none  text-white">Contact</a></li>
+                            <li><a href="" class="text-decoration-none  text-white">Deals</a></li>
+                        </ul>
+                        <div class="d-flex align-items-center text-white gap-2 mb-0">
+                            <i class="bi bi-headset mb-0 fs-5"></i>
+                            <p class="fs-5 mb-0">(+977) 01454585</p>
+                        </div>
+                        <button class="btn border-0 fs-4" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <i class="bi bi-list"></i>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-layout-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="left-page-links position-relative">
+                        <section class="left-bar-fixed-page-links position-fixed d-flex flex-column h-100 px-2">
+                            <div class="comment-section-mark ms-1">
+                                <a href="#" class="text-decoration-none text-danger" aria-label="Comment">
+                                    <i class="fa-solid fa-comment fs-5 mb-3"></i>
+                                </a>
+                            </div>
+                            <div class="comment-section-mark ms-1">
+                                <a href="#" class="text-decoration-none text-danger" aria-label="Bookmark">
+                                    <i class="fa-regular fa-bookmark fs-5"></i>
+                                </a>
+                            </div>
+                            <span class="rotate-clockwise fw-medium">On this page</span>
+                            <div class="dots content-nav-items d-flex flex-column ms-2">
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span
+                                            class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">Small
+                                            but plenty of features</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span
+                                            class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">Recording
+                                            your rounds&nbsp;</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span
+                                            class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">PowerShot
+                                            GOLF key specs&nbsp;</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span
+                                            class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">Price
+                                            and availability</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="content-nav-item text-decoration-none text-dark mb-2">
+                                    <span class="material-icons"><i class="fa-solid fa-circle fs-9 me-3"></i></span>
+                                    <span class="nav-column-name">
+                                        <span
+                                            class="px-2 py-2 bg-dark text-white fs-8 rounded-5 overflow-hidden invisible">Comments</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <span class="rotate-clockwise fw-medium height-55px">Share</span>
+                            <ul class="social-links-wrapper list-unstyled">
+                                <li><a href="#" class="px-1 py-1 hover-bg-black-c-white text-dark rounded-circle"><i
+                                            class="mt-2 fa-brands fa-facebook"></i></a></li>
+                                <li><a href="#" class="px-1 py-1 hover-bg-black-c-white text-dark rounded-circle"><i
+                                            class="mt-2 fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#" class="px-1 py-1 hover-bg-black-c-white text-dark rounded-circle"><i
+                                            class="mt-2 fa-brands fa-threads"></i></a></li>
+                                <li><a href="#" class="px-1 py-1 hover-bg-black-c-white text-dark rounded-circle"><i
+                                            class="mt-2 fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-lg-11 px-0">
+                    <div>
+                        djd
+                    </div>
+
+                    <div class="background-container-trending bg-dark pb-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-12">
+                                    <div class="title-whats-hot py-4 mt-5 text-white">
+                                        <h1>What's hot</h1>
+                                    </div>
+                                    <div class="img-container-whats-hot bg-white rounded-top-4">
+                                        <a href="#" class="text-decoration-none text-dark hover-underline-pink">
+                                            <img src="https://static.independent.co.uk/2024/10/30/12/Wireless-headphones.jpg"
+                                                alt="Sonos announces its first headphones"
+                                                class="w-100 position-relative z- rounded-4">
+                                            <div
+                                                class="content-box-whats-hot px-5 py-4 position-relative z-3 bg-white rounded-end-5">
+                                                <h2 class="text-capitalize">Sonos announces its first headphones, with
+                                                    noise cancellation and Dolby Atmos – but not the feature we most
+                                                    expected</h2>
+                                                <p class="pt-2 fs-5">Sonos Ace are packed with features, but don't work
+                                                    with Sonos' Wi-Fi music system, surprisingly.</p>
+                                            </div>
+                                        </a>
+                                        <div class="row px-5 g-3">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <a href="#" class="text-decoration-none text-dark hover-underline-blue">
+                                                    <img src="https://img.freepik.com/free-photo/nice-headphones-light-background_23-2147781426.jpg?t=st=1735553999~exp=1735557599~hmac=4a9a4f9c3709769fcd84db7ad7c3b8d6bd9d73952ec094702f6859e709e64030&w=360"
+                                                        alt="Windows Recall sounds like a privacy nightmare"
+                                                        class="w-100 mb-3 rounded-2" style="height:400px;">
+                                                    <h2 class="fs-5 mb-5">Windows Recall sounds like a privacy nightmare
+                                                        – here's why I'm worried</h2>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <a href="#" class="text-decoration-none text-dark hover-underline-blue">
+                                                    <img src="https://img.freepik.com/free-photo/pink-white-wireless-headphones_140725-7526.jpg?t=st=1735552220~exp=1735555820~hmac=784c1e139d9ca1c7bdcc31e917f3b4af28d946d13c51c04c24eac873f47685af&w=360"
+                                                        alt="Windows Recall sounds like a privacy nightmare"
+                                                        class="w-100 mb-3 rounded-2" style="height:400px;">
+                                                    <h2 class="fs-5 mb-5">Windows Recall sounds like a privacy nightmare
+                                                        – here's why I'm worried</h2>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <a href="#" class="text-decoration-none text-dark hover-underline-blue">
+                                                    <img src="https://img.freepik.com/free-photo/still-life-tech-device_23-2150722706.jpg?t=st=1735552142~exp=1735555742~hmac=058230d88a09d00badac00734b74e91f793ca4d51c6f0e46cc156cd26e607bba&w=360"
+                                                        alt="Windows Recall sounds like a privacy nightmare"
+                                                        class="w-100 mb-3 rounded-2" style="height:400px;">
+                                                    <h2 class="fs-5 mb-5">Windows Recall sounds like a privacy nightmare
+                                                        – here's why I'm worried</h2>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <a href="#" class="text-decoration-none text-dark hover-underline-blue">
+                                                    <img src="https://img.freepik.com/free-photo/headphones-with-music-cds_23-2148133615.jpg?t=st=1735552731~exp=1735556331~hmac=19a370f1fef9071fb39dea250608277d9e8c1057173def379eddb1e10c7cf9c7&w=740"
+                                                        alt="Windows Recall sounds like a privacy nightmare"
+                                                        class="w-100 mb-3 rounded-2" style="height:400px;">
+                                                    <h2 class="fs-5 mb-5">Windows Recall sounds like a privacy nightmare
+                                                        – here's why I'm worried</h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="">
+                                        <div class="row py-2 mt-5">
+                                            <div class="col-12">
+                                                <div
+                                                    class="d-flex  text-white justify-content-between align-items-center mb-3 ">
+                                                    <h1 class="fs-1 fw-bolder">HOW TO</h1>
+                                                    <p class="mb-0">Show all</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="row  text-white ">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="rounded">
+                                                    <div class="">
+                                                        <img src="https://cdn.pixabay.com/photo/2016/11/29/12/30/phone-1869510_960_720.jpg"
+                                                            alt="" class="w-75 img-fluid rounded">
+                                                    </div>
+
+                                                    <div class="mt-2 ">
+                                                        <h5 class="text-primary">Google</h5>
+                                                        <p class="fw-bolder">How to use Google lens in Chrome browser
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="rounded ">
+                                                    <div class="">
+                                                        <img src="https://cdn.pixabay.com/photo/2019/11/23/11/33/mobile-phone-4646854_1280.jpg"
+                                                            alt="" class="w-75 img-fluid rounded ">
+                                                    </div>
+
+                                                    <div class="mt-2 mb-4 mb-lg-0">
+                                                        <h5 class="text-primary">Google</h5>
+                                                        <p class="fw-bolder">How to use Google lens in Chrome browser
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="rounded ">
+                                                    <div class="">
+                                                        <img src="https://cdn.pixabay.com/photo/2014/08/05/10/30/iphone-410324_960_720.jpg"
+                                                            alt="" class="w-75 img-fluid rounded">
+                                                    </div>
+
+                                                    <div class="mt-2  mb-4 mb-lg-0">
+                                                        <h5 class="text-primary">Google</h5>
+                                                        <p class="fw-bolder ">How to use Google lens in Chrome browser
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="rounded">
+                                                    <div class="">
+                                                        <img src="https://cdn.pixabay.com/photo/2016/03/27/19/43/samsung-1283938_960_720.jpg"
+                                                            alt="" class="w-75 img-fluid rounded">
+                                                    </div>
+
+                                                    <div class="mt-2  mb-4 mb-lg-0">
+                                                        <h5 class="text-primary">Google</h5>
+                                                        <p class="fw-bolder">How to use Google lens in Chrome browser
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="title-whats-hot pt-4 pb-3 mt-5 text-white">
+                                        <h1>Latest news</h1>
+                                    </div>
+                                    <a href="#"
+                                        class="text-decoration-none text-white fs-4 fw-semibold d-flex align-items-center gap-2">
+                                        ALL NEWS <i class="fa-solid fa-angle-right fs-7 text-pinkish-color"></i>
+                                    </a>
+                                    <div class="all-news-news-feed">
+                                        <ul class="list-unstyled text-white counter-increasement">
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072198.jpg?t=st=1735626738~exp=1735630338~hmac=7f89edd9cb23ad20386a408dc94079d947f0e6107c39f0128373e76ec5516f56&w=996"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://cdn.pixabay.com/photo/2021/02/13/03/30/airpods-6010255_960_720.jpg"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074301.jpg?t=st=1735626862~exp=1735630462~hmac=2215f3e1911039d12f807ca3cee28fc33d019f3409712b9d33fd62ff5e171dfe&w=996"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074299.jpg?t=st=1735626889~exp=1735630489~hmac=1fd7ffe8fcf009815fd5d220d94e562201a0de375ecd2c81caba735638f7e84b&w=1060"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://cdn.pixabay.com/photo/2023/05/07/10/20/airpods-7976095_960_720.jpg"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074263.jpg?t=st=1735626533~exp=1735630133~hmac=368d41e43a6ac5b20e7666b6abd96fba852e85acc3911855632f6fb7e927ed16&w=900"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://cdn.pixabay.com/photo/2022/05/28/05/29/airpods-7226558_960_720.jpg"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://cdn.pixabay.com/photo/2020/05/14/09/54/earphones-5193970_960_720.jpg"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://cdn.pixabay.com/photo/2020/09/24/14/51/earphones-5598952_960_720.jpg"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074299.jpg?t=st=1735626889~exp=1735630489~hmac=1fd7ffe8fcf009815fd5d220d94e562201a0de375ecd2c81caba735638f7e84b&w=1060"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074299.jpg?t=st=1735626889~exp=1735630489~hmac=1fd7ffe8fcf009815fd5d220d94e562201a0de375ecd2c81caba735638f7e84b&w=1060"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+
+                                            <li class="pb-4 border-white-1 position-relative mt-4">
+                                                <a href="#"
+                                                    class="text-white text-decoration-none d-flex ps-5 hover-underline-blue ">
+                                                    <div class="pe-4">
+                                                        <h4 class="fs-6">Kick this robot: Ecovacs' new robovac wants you
+                                                            to give it the boot – literally</h4>
+                                                        <span class="fs-7 fw-semibold text-pinkish-color">ROBOT
+                                                            VACUUMS</span>
+                                                    </div>
+                                                    <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074299.jpg?t=st=1735626889~exp=1735630489~hmac=1fd7ffe8fcf009815fd5d220d94e562201a0de375ecd2c81caba735638f7e84b&w=1060"
+                                                        alt="Earbu" class="w-50 pe-0 object-fit-cover">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="row mt-5 px-3 px-lg-0">
+                            <div class="col-lg-12">
+                                <div class="mb-2">
+                                    <h1 class="fw-bold">TECH TIPS</h1>
+                                    <p>Get the most out of your phone with the expert advice</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row px-3 px-lg-0">
+                            <div class="col-lg-4">
+                                <img src="https://cdn.pixabay.com/photo/2017/08/01/16/50/mobile-2566615_1280.jpg" alt=""
+                                    class="img-fluid w-100 ">
+                                <p class="fw-bold py-1">10 Hidden iOS 18.2 iPhone Features You Should Know About</p>
+                                <p class="mb-4 mb-lg-0">- By <span class="fw-bold ">Britanny Vincent</span> </p>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <img src="https://cdn.pixabay.com/photo/2021/04/11/18/37/netflix-6170551_1280.jpg"
+                                    alt="" class="img-fluid w-100 ">
+                                <p class="fw-bold py-1 ">Cant find anything good on Netflix? Try the secret menu to find
+                                    Movies and
+                                    Shows
+                                </p>
+                                <p class="mb-4 mb-lg-0">- By <span class="fw-bold ">Britanny Vincent</span> </p>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <img src="https://cdn.pixabay.com/photo/2019/12/12/11/40/engineer-4690505_960_720.jpg"
+                                    alt="" class="img-fluid w-100 photo">
+                                <p class="fw-bold py-1">10 Hidden iOS 18.2 iPhone Features You Should Know About</p>
+                                <p class="mb-4 mb-lg-0">- By <span class="fw-bold ">Britanny Vincent</span> </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="container-fluid">
+                        <div class="mt-5 bg-dark text-white">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h1 class="text-center fw-bold p-3">Feature Product</h1>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="px-5">
+                                        <swiper-container class="mySwiper" pagination="true"
+                                            pagination-clickable="true">
+                                            <swiper-slide>
+                                                <div class="text-center bg-white" style="position: relative;">
+                                                    <div class="top-0 "
+                                                        style="background-color:black; color: white; position: absolute; right:0px;">
+                                                        <p class="mb-0 py-1 px-2">-29%</p>
+                                                    </div>
+                                                    <div class="pt-5 px-5">
+                                                        <img src="https://cdn.pixabay.com/photo/2021/11/11/23/22/headphones-6787497_960_720.jpg"
+                                                            alt="headphone photo"
+                                                            class="w-100 rounded-3 object-fit-cover photo">
+                                                    </div>
+                                                    <div class="mt-4 mb-5 ">
+                                                        <h3 class="fw-bold text-dark">Headphone</h3>
+                                                        <div class="d-flex justify-content-center pb-4 mt-2 gap-2">
+                                                            <p class="price-current  text-danger   ">$2,500.00</p>
+                                                            <p class="price-original text-secondary">$3,500.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </swiper-slide>
+
+                                            <swiper-slide>
+                                                <div class="text-center bg-white" style="position: relative;">
+                                                    <div class="top-0 "
+                                                        style="background-color: black; color: white; position: absolute; right:0px;">
+                                                        <p class="mb-0 py-1 px-2">-29%</p>
+                                                    </div>
+                                                    <div class="pt-5 px-5">
+                                                        <img src="https://img.freepik.com/free-photo/modern-wireless-earphones-with-case-simple-concrete-background_23-2150808007.jpg?t=st=1735630840~exp=1735634440~hmac=d8bca796d4680707c4064cd60af97c09406ae8bcb68ab8040d6e853d1d15b083&w=360"
+                                                            alt="headphone"
+                                                            class="w-100 rounded-3 object-fit-cover photo">
+                                                    </div>
+                                                    <div class="mt-4 mb-5 ">
+                                                        <h3 class="fw-bold text-dark">Headphone</h3>
+                                                        <div class="d-flex justify-content-center pb-4 mt-2 gap-2">
+                                                            <p class="price-current  text-danger   ">$2,500.00</p>
+                                                            <p class="price-original text-secondary">$3,500.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </swiper-slide>
+
+                                            <swiper-slide>
+                                                <div class="text-center bg-white" style="position: relative;">
+                                                    <div class="top-0 "
+                                                        style="background-color: black; color: white; position: absolute; right:0px;">
+                                                        <p class="mb-0 py-1 px-2">-29%</p>
+                                                    </div>
+                                                    <div class="pt-5 px-5">
+                                                        <img src="https://cdn.pixabay.com/photo/2017/08/14/06/04/earphone-2639487_960_720.jpg"
+                                                            alt="headphone"
+                                                            class="w-100 rounded-3 object-fit-cover photo">
+                                                    </div>
+                                                    <div class="mt-4 mb-5 ">
+                                                        <h3 class="fw-bold text-dark">Headphone</h3>
+                                                        <div class="d-flex justify-content-center pb-4 mt-2 gap-2">
+                                                            <p class="price-current  text-danger   ">$2,500.00</p>
+                                                            <p class="price-original text-secondary">$3,500.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </swiper-slide>
+
+                                            <swiper-slide>
+                                                <div class="text-center bg-white" style="position: relative;">
+                                                    <div class="top-0 "
+                                                        style="background-color: black; color: white; position: absolute; right:0px;">
+                                                        <p class="mb-0 py-1 px-2">-29%</p>
+                                                    </div>
+                                                    <div class="pt-5 px-5">
+                                                        <img src="https://img.freepik.com/premium-photo/neckband-earbuds-with-minimal-background_23-2151518909.jpg?w=360"
+                                                            alt="headphone"
+                                                            class="w-100 rounded-3 object-fit-cover photo">
+                                                    </div>
+                                                    <div class="mt-4 mb-5 ">
+                                                        <h3 class="fw-bold text-dark">Headphone</h3>
+                                                        <div class="d-flex justify-content-center pb-4 mt-2 gap-2">
+                                                            <p class="price-current  text-danger   ">$2,500.00</p>
+                                                            <p class="price-original text-secondary">$3,500.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </swiper-slide>
+
+
+                                            <swiper-slide>
+                                                <div class="text-center bg-white" style="position: relative;">
+                                                    <div class="top-0 "
+                                                        style="background-color: black; color: white; position: absolute; right:0px;">
+                                                        <p class="mb-0 py-1 px-2">-29%</p>
+                                                    </div>
+                                                    <div class="pt-5 px-5">
+                                                        <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074303.jpg?t=st=1735632250~exp=1735635850~hmac=3c088342a719d4784af935ea3f710e7a20a81518fd5ce7d8f961e35e21983a4a&w=360"
+                                                            alt="headphone"
+                                                            class="w-100 rounded-3 object-fit-cover photo"">
+                                                    </div>
+                                                    <div class=" mt-4 mb-5 ">
+                                                        <h3 class=" fw-bold text-dark">Headphone</h3>
+                                                        <div class="d-flex justify-content-center pb-4 mt-2 gap-2">
+                                                            <p class="price-current  text-danger   ">$2,500.00</p>
+                                                            <p class="price-original text-secondary">$3,500.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </swiper-slide>
+
+
+                                            <swiper-slide>
+                                                <div class="text-center bg-white" style="position: relative;">
+                                                    <div class="top-0 "
+                                                        style="background-color: black; color: white; position: absolute; right:0px;">
+                                                        <p class="mb-0 py-1 px-2">-29%</p>
+                                                    </div>
+                                                    <div class="pt-5 px-5">
+                                                        <img src="https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074297.jpg?t=st=1735632306~exp=1735635906~hmac=b978df7788c3dfdf69179cb11db1158e6cece777cac7a00438aed749c62c49c4&w=360"
+                                                            alt="headphone"
+                                                            class="w-100 rounded-3 object-fit-cover photo">
+                                                    </div>
+                                                    <div class="mt-4 mb-5 ">
+                                                        <h3 class="fw-bold text-dark">Headphone</h3>
+                                                        <div class="d-flex justify-content-center pb-4 mt-2 gap-2">
+                                                            <p class="price-current  text-danger   ">$2,500.00</p>
+                                                            <p class="price-original text-secondary">$3,500.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </swiper-slide>
+
+
+
+                                            <swiper-slide>
+                                                <div class="text-center bg-white" style="position: relative;">
+                                                    <div class="top-0 "
+                                                        style="background-color: black; color: white; position: absolute; right:0px;">
+                                                        <p class="mb-0 py-1 px-2">-29%</p>
+                                                    </div>
+                                                    <div class="pt-5 px-5">
+                                                        <img src="https://img.freepik.com/free-photo/pnga-cup-tea-with-headphones-isolated-white-background_185193-163924.jpg?t=st=1735632509~exp=1735636109~hmac=776faf504f8512c29ad8ddb55ba3607d006f46d85d74281bc73f67300aa1ef18&w=996"
+                                                            alt="headphone"
+                                                            class="w-100 rounded-3 object-fit-cover photo">
+                                                    </div>
+                                                    <div class="mt-4 mb-5 ">
+                                                        <h3 class="fw-bold text-dark">Headphone</h3>
+                                                        <div class="d-flex justify-content-center pb-4 mt-2 gap-2">
+                                                            <p class="price-current  text-danger   ">$2,500.00</p>
+                                                            <p class="price-original text-secondary">$3,500.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </swiper-slide>
+
+
+                                            <swiper-slide>
+                                                <div class="text-center bg-white" style="position: relative;">
+                                                    <div class="top-0 "
+                                                        style="background-color: black; color: white; position: absolute; right:0px;">
+                                                        <p class="mb-0 py-1 px-2">-29%</p>
+                                                    </div>
+                                                    <div class="pt-5 px-5">
+                                                        <img src="https://img.freepik.com/free-photo/modern-wireless-earphones-with-case-displayed-round-podium-with-soft-shadows_23-2150808021.jpg?t=st=1735632649~exp=1735636249~hmac=6e4170dc89dbc20ce6dd9bf0035d82cb3adc6c0bd748c2418e68fdd7d9ca1d5f&w=360"
+                                                            alt="headphone"
+                                                            class="w-100 rounded-3 object-fit-cover photo">
+                                                    </div>
+                                                    <div class="mt-4 mb-5 ">
+                                                        <h3 class="fw-bold text-dark">Headphone</h3>
+                                                        <div class="d-flex justify-content-center pb-4 mt-2 gap-2">
+                                                            <p class="price-current  text-danger   ">$2,500.00</p>
+                                                            <p class="price-original text-secondary">$3,500.00</p>
+                                                        </div>
+                                                    </div>
+
+
+                                            </swiper-slide>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+
+                                        </swiper-container>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark py-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <h1 class="text-uppercase text-white pb-2 fs-4">Gadget Rumor</h1>
+                <p class="text-white text-capitalize pb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ipsam, aperiam?</p>
+                <div class="input-group w-75 mb-3">
+                    <input type="text gadgetrumor" class="form-control" placeholder="Your Email" aria-label="Your Email"
+                        aria-describedby="basic-addon1">
+                    <button class="input-group-text" id="basic-addon1">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="px-2">
+                    <h1 class="text-white text-uppercase fs-4">Quick Links</h1>
+                    <ul>
+                        <li class="py-1"><a href="" class="text-white text-decoration-none fs-6">Home</a></li>
+                        <li class="py-1"><a href="" class="text-white text-decoration-none fs-6">Review</a></li>
+                        <li class="py-1"><a href="" class="text-white text-decoration-none fs-6">News</a></li>
+                        <li class="py-1"><a href="" class="text-white text-decoration-none fs-6">Contact Us</a></li>
+                        <li class="py-1"><a href="" class="text-white text-decoration-none fs-6">About</a></li>
+                        <li class="py-1"><a href="" class="text-white text-decoration-none fs-6">Best Product</a></li>
+                        <li class="py-1"><a href="" class="text-white text-decoration-none fs-6">Brands</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div>
+                    <h1 class="text-uppercase text-white fs-4">Stay TUned</h1>
+                    <p class="text-capitalize text-white mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <div>
+                        <div class="text-white d-flex align-items-center gap-3 py-2">
+                            <i class="bi bi-envelope fs-6"></i>
+                            <p class="fs-6 mb-0">gadgetrumor69@gmail.com</p>
+                        </div>
+                        <div class="text-white d-flex align-items-center gap-3 py-2">
+                            <i class="bi bi-telephone fs-6"></i>
+                            <p class="fs-6 mb-0">+9779841754781</p>
+                        </div>
+                        <div class="d-flex gap-2 mt-3">
+                            <div class="bg-primary d-flex align-items-center justify-content-center pb-1 rounded-2">
+                                <i class="bi bi-facebook px-1 text-white"></i>
+                            </div>
+                            <div class="bg-white d-flex align-items-center justify-content-center pb-1 rounded-2">
+                                <i class="bi bi-twitter px-1 text-primary"></i>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center pb-1 rounded-2"
+                                style="background-color: #FD188E;">
+                                <i class="bi bi-instagram px-1 text-white"></i>
+                            </div>
+                            <div class="bg-white d-flex align-items-center justify-content-center pb-1 rounded-2 mb-0">
+                                <i class="bi bi-youtube px-1 text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const swiperEl = document.querySelector('swiper-container')
+        Object.assign(swiperEl, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            },
+            navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+        });
+        swiperEl.initialize();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-WpOohVFF5TAx9rIdfJT6/4fT6Y6W0S4g1sGkq3q3cmP4zrZLq/ImkRywTlgmMRH8"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
